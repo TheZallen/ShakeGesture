@@ -15,6 +15,8 @@
 		314133BE1B03C9F8009B5553 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314133BD1B03C9F8009B5553 /* Images.xcassets */; };
 		314133C11B03C9F8009B5553 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314133BF1B03C9F8009B5553 /* LaunchScreen.xib */; };
 		314133CD1B03C9F9009B5553 /* ShakeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 314133CC1B03C9F9009B5553 /* ShakeTestTests.m */; };
+		31A1230F1B0D03A500A6119A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A1230E1B0D03A500A6119A /* AudioToolbox.framework */; };
+		31A123111B0D06FD00A6119A /* alert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31A123101B0D06FD00A6119A /* alert.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		314133C61B03C9F9009B5553 /* ShakeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		314133CB1B03C9F9009B5553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		314133CC1B03C9F9009B5553 /* ShakeTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeTestTests.m; sourceTree = "<group>"; };
+		31A1230E1B0D03A500A6119A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		31A123101B0D06FD00A6119A /* alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A1230F1B0D03A500A6119A /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 		314133A11B03C9F8009B5553 = {
 			isa = PBXGroup;
 			children = (
+				31A1230E1B0D03A500A6119A /* AudioToolbox.framework */,
 				314133AC1B03C9F8009B5553 /* ShakeTest */,
 				314133C91B03C9F9009B5553 /* ShakeTestTests */,
 				314133AB1B03C9F8009B5553 /* Products */,
@@ -87,6 +93,7 @@
 				314133B21B03C9F8009B5553 /* AppDelegate.m */,
 				314133B71B03C9F8009B5553 /* ViewController.h */,
 				314133B81B03C9F8009B5553 /* ViewController.m */,
+				31A123101B0D06FD00A6119A /* alert.mp3 */,
 				314133BA1B03C9F8009B5553 /* Main.storyboard */,
 				314133BD1B03C9F8009B5553 /* Images.xcassets */,
 				314133BF1B03C9F8009B5553 /* LaunchScreen.xib */,
@@ -171,6 +178,7 @@
 				TargetAttributes = {
 					314133A91B03C9F8009B5553 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = W4E2C6X642;
 					};
 					314133C51B03C9F9009B5553 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -205,6 +213,7 @@
 				314133BC1B03C9F8009B5553 /* Main.storyboard in Resources */,
 				314133C11B03C9F8009B5553 /* LaunchScreen.xib in Resources */,
 				314133BE1B03C9F8009B5553 /* Images.xcassets in Resources */,
+				31A123111B0D06FD00A6119A /* alert.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ShakeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -361,9 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ShakeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -420,6 +435,7 @@
 				314133D21B03C9F9009B5553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		314133D31B03C9F9009B5553 /* Build configuration list for PBXNativeTarget "ShakeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +444,7 @@
 				314133D51B03C9F9009B5553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
